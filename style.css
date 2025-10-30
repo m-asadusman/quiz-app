@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'got';
+    src: url('./assets/trajanPro.woff');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'got';
+    color: #f7c58d;
+}
+
+body{ 
+    height: 1200px;
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./assets/bg.jpg) center / cover;
+}
+
+h1{
+    font-weight: lighter;
+}
+
+.mainBox{
+    display: flex;
+    margin: 100px auto;
+    padding: 50px;
+    width: 1000px;
+    height: 700px;
+    text-align: center;
+    background: #5f5f5f;
+    border-radius: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), center;
+}
+
+.mainBox h1{
+    font-size: 50px;
+}
+
+.btn{
+    width: 155px;
+    height: 50px;
+    font-size: 20px;
+    border: 2px solid;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 0 auto;
+    background:transparent;
+}
+
+.quizBox{    
+    display: none;
+    margin: 100px auto;
+    padding: 50px;
+    width: 1000px;
+    height: 700px;
+    background: #5f5f5f;
+    border-radius: 30px;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-evenly; 
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), center;
+}
+
+.quizBox h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+#question{
+    font-size: 30px;
+    margin-bottom: -20px;
+}
+
+#options li{
+    display: flex;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 25px;
+    align-items: center;
+    text-align: left;
+    list-style: none;
+    cursor: pointer;
+}
+
+.nextEnabled{
+    margin: 0 auto;
+}
+
+.nextDisabled{
+    margin: 0 auto;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.resultBox{    
+    display: none;
+    margin: 100px auto;
+    padding: 50px;
+    width: 1000px;
+    height: 700px;
+    background: #5f5f5f;
+    border-radius: 30px;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), center;
+}
+
+#pf{
+    font-size: 40px;
+}
+
+.rSpan{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 25px;
+}
+
+#progress span{
+    font-size: 35px;
+}
