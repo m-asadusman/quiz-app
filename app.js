@@ -9,7 +9,7 @@ var total = document.getElementById('total')
 var correct = document.getElementById('correct')
 var wrong = document.getElementById('wrong')
 var score = document.getElementById('score')
-var pf = document.getElementById('pf')
+var msg = document.getElementById('msg')
 var tryAgainBtn = document.getElementById('tryAgainBtn')
 var questionCounter = 0
 var qSpanCounter = 1
@@ -50,10 +50,10 @@ var questionsArr = [
     {
         question: "Which city is Daenerys Targaryen's first major conquest?",
         options: {
-            a: "Meereen",
+            a: "Oldtown",
             b: "King's Landing",
             c: "Winterfell",
-            d: "Oldtown",
+            d: "Meereen",
         },
         answer: "Meereen",
     },
@@ -90,10 +90,10 @@ var questionsArr = [
     {
         question: "Who is the Lord Commander of the Night's Watch at the start of the series?",
         options: {
-            a: "Jeor Mormont",
+            a: "Alliser Thorne",
             b: "Jon Snow",
             c: "Samwell Tarly",
-            d: "Alliser Thorne",
+            d: "Jeor Mormont",
         },
         answer: "Jeor Mormont",
     },
@@ -197,16 +197,17 @@ function result(){
     wrong.innerHTML = wrongAnswers
     var scoreCount = Math.round((correctAnswers / questionCounter) * 100)
     score.innerHTML = scoreCount
+
     if(scoreCount < 21){
-        pf.innerHTML = "You know nothing, Jon Snow."
+        msg.innerHTML = "You know nothing, Jon Snow."
     }else if(scoreCount < 41){
-        pf.innerHTML = "A squire in the courts of Westeros."
+        msg.innerHTML = "A squire in the courts of Westeros."
     }else if(scoreCount < 61){
-        pf.innerHTML = "A sworn brother of the Night's Watch."
+        msg.innerHTML = "A sworn brother of the Night's Watch."
     }else if(scoreCount < 81){
-        pf.innerHTML = "A noble of Westeros."
+        msg.innerHTML = "A noble of Westeros."
     }else{
-        pf.innerHTML = "You have claimed the Iron Throne!"
+        msg.innerHTML = "You have claimed the Iron Throne!"
     }
 }
 

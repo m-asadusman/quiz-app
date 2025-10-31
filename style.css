@@ -115,7 +115,7 @@ h1{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), center;
 }
 
-#pf{
+#msg{
     font-size: 40px;
 }
 
@@ -128,4 +128,119 @@ h1{
 
 #progress span{
     font-size: 35px;
+}
+
+
+@media screen and (max-width: 1100px) {
+    body{
+        height: 1100px;
+    }
+
+    .mainBox , .quizBox , .resultBox{
+        width: 700px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    body{
+        height: 900px;
+    }
+
+    .mainBox , .quizBox , .resultBox{
+        width: 450px;
+        height: 550px;  
+        padding: 30px;
+    }
+
+    .mainBox h1{
+    font-size: 33px;
+    }
+
+    .btn{
+    width: 140px;
+    height: 45px;
+    font-size: 17px;
+    }
+
+    .quizBox h1{
+    font-size: 30px;
+    }
+
+    #question{
+    font-size: 24px;
+    }
+
+    #options li{
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 50px;
+    font-size: 20px;
+    }
+
+    #msg{
+        font-size: 26px;
+    }
+
+    .rSpan{
+    gap: 10px;
+    font-size: 20px;
+    }
+
+    #progress span{
+    font-size: 24px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    body{
+        height: 700px;
+    }
+
+    .mainBox , .quizBox , .resultBox{
+        width: 370px;
+        height: 450px;
+        padding: 15px;
+        margin: 70px auto;
+    }
+
+    .mainBox h1{
+    font-size: 30px;
+    }
+
+    .btn{
+    width: 110px;
+    height: 38px;
+    font-size: 14px;
+    }
+
+    .quizBox h1{
+    font-size: 24px;
+    margin-bottom: -10px;
+    }
+
+    #question{
+    font-size: 18px;
+    }
+
+    #options li{
+    padding: 10px;
+    margin-bottom: 6px;
+    height: 40px;
+    font-size: 17px;
+    }
+
+    #msg{
+        font-size: 21px;
+    }
+
+    .rSpan{
+    gap: 7px;
+    font-size: 17px;
+    }
+
+    #progress span{
+    font-size: 20px;
+    }
 }
