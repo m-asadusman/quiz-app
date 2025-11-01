@@ -18,104 +18,104 @@ var wrongAnswers = 0
 
 var questionsArr = [
     {
-        question: "Who is known as the 'Mother of Dragons'?",
+        question: "Which keyword is used to declare a variable in JavaScript?",
         options: {
-            a: "Cersei Lannister",
-            b: "Daenerys Targaryen",
-            c: "Sansa Stark",
-            d: "Arya Stark",
+            a: "var",
+            b: "let",
+            c: "const",
+            d: "All of the above",
         },
-        answer: "Daenerys Targaryen",
+        answer: "All of the above",
     },
     {
-        question: "Which house has a direwolf as its sigil?",
+        question: "Which of the following is NOT a JavaScript data type?",
         options: {
-            a: "Stark",
-            b: "Lannister",
-            c: "Targaryen",
-            d: "Baratheon",
+            a: "String",
+            b: "Number",
+            c: "Boolean",
+            d: "Character",
         },
-        answer: "Stark",
+        answer: "Character",
     },
     {
-        question: "Who is called 'The Kingslayer'?",
+        question: "What is the output of 'typeof null' in JavaScript?",
         options: {
-            a: "Jaime Lannister",
-            b: "Tyrion Lannister",
-            c: "Ned Stark",
-            d: "Robb Stark",
+            a: "'null'",
+            b: "'undefined'",
+            c: "'object'",
+            d: "'number'",
         },
-        answer: "Jaime Lannister",
+        answer: "'object'",
     },
     {
-        question: "Which city is Daenerys Targaryen's first major conquest?",
+        question: "Which method is used to convert a JSON string into a JavaScript object?",
         options: {
-            a: "Oldtown",
-            b: "King's Landing",
-            c: "Winterfell",
-            d: "Meereen",
+            a: "JSON.parse()",
+            b: "JSON.stringify()",
+            c: "JSON.convert()",
+            d: "JSON.toObject()",
         },
-        answer: "Meereen",
+        answer: "JSON.parse()",
     },
     {
-        question: "What is Jon Snow's real parentage?",
+        question: "Which symbol is used for comments in JavaScript?",
         options: {
-            a: "Ned Stark & Catelyn Stark",
-            b: "Rhaegar Targaryen & Lyanna Stark",
-            c: "Robert Baratheon & Lyanna Stark",
-            d: "Eddard Stark & Wylla",
+            a: "// for single-line, /* */ for multi-line",
+            b: "# for single-line",
+            c: "<!-- -->",
+            d: "None of the above",
         },
-        answer: "Rhaegar Targaryen & Lyanna Stark",
+        answer: "// for single-line, /* */ for multi-line",
     },
     {
-        question: "Who is the youngest Stark child?",
+        question: "What will `2 + '2'` return in JavaScript?",
         options: {
-            a: "Arya",
-            b: "Bran",
-            c: "Rickon",
-            d: "Sansa",
+            a: "4",
+            b: "'22'",
+            c: "NaN",
+            d: "Error",
         },
-        answer: "Rickon",
+        answer: "'22'",
     },
     {
-        question: "Which character is known for saying 'A Lannister always pays his debts'?",
+        question: "Which company developed JavaScript?",
         options: {
-            a: "Tyrion Lannister",
-            b: "Cersei Lannister",
-            c: "Jaime Lannister",
-            d: "Tywin Lannister",
+            a: "Microsoft",
+            b: "Netscape",
+            c: "Sun Microsystems",
+            d: "Oracle",
         },
-        answer: "Tyrion Lannister",
+        answer: "Netscape",
     },
     {
-        question: "Who is the Lord Commander of the Night's Watch at the start of the series?",
+        question: "Which of the following methods is used to add an element at the end of an array?",
         options: {
-            a: "Alliser Thorne",
-            b: "Jon Snow",
-            c: "Samwell Tarly",
-            d: "Jeor Mormont",
+            a: "push()",
+            b: "pop()",
+            c: "shift()",
+            d: "unshift()",
         },
-        answer: "Jeor Mormont",
+        answer: "push()",
     },
     {
-        question: "What is the ancestral seat of House Baratheon?",
+        question: "What is the default value of an uninitialized variable in JavaScript?",
         options: {
-            a: "Storm's End",
-            b: "Dragonstone",
-            c: "Winterfell",
-            d: "Casterly Rock",
+            a: "null",
+            b: "undefined",
+            c: "0",
+            d: "NaN",
         },
-        answer: "Storm's End",
+        answer: "undefined",
     },
     {
-        question: "Who kills the Night King?",
+        question: "What will `console.log(0 == '0')` output?",
         options: {
-            a: "Jon Snow",
-            b: "Arya Stark",
-            c: "Bran Stark",
-            d: "Daenerys Targaryen",
+            a: "true",
+            b: "false",
+            c: "undefined",
+            d: "Error",
         },
-        answer: "Arya Stark",
+        answer: "true",
     }
 ];
 
@@ -163,16 +163,16 @@ function runQuestions(){
 function opts(ele){
     
     if(ele.textContent == questionsArr[questionCounter].answer){
-        ele.style.background = '#003a00ff'
+        ele.style.background = 'linear-gradient(90deg,rgba(68, 117, 61, 1) 0%, rgba(7, 71, 2, 1) 100%)'
         correctAnswers++
     }else{
-        ele.style.background = '#550202ff'
+        ele.style.background = 'linear-gradient(90deg,rgba(122, 39, 39, 1) 0%, rgba(94, 0, 0, 1) 100%)'
         wrongAnswers++
     }
 
     for(var li of options){
         if(li.textContent == questionsArr[questionCounter].answer){
-            li.style.background = '#045304'
+            li.style.background = 'linear-gradient(90deg,rgba(68, 117, 61, 1) 0%, rgba(7, 71, 2, 1) 100%)'
         }
         li.style.pointerEvents = 'none'
     }
@@ -198,16 +198,10 @@ function result(){
     var scoreCount = Math.round((correctAnswers / questionCounter) * 100)
     score.innerHTML = scoreCount
 
-    if(scoreCount < 21){
-        msg.innerHTML = "You know nothing, Jon Snow."
-    }else if(scoreCount < 41){
-        msg.innerHTML = "A squire in the courts of Westeros."
-    }else if(scoreCount < 61){
-        msg.innerHTML = "A sworn brother of the Night's Watch."
-    }else if(scoreCount < 81){
-        msg.innerHTML = "A noble of Westeros."
+    if(scoreCount < 60){
+        msg.innerHTML = "You have failed!"
     }else{
-        msg.innerHTML = "You have claimed the Iron Throne!"
+        msg.innerHTML = "You have passed!"
     }
 }
 

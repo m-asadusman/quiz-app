@@ -1,25 +1,13 @@
-@font-face {
-    font-family: 'got';
-    src: url('./assets/trajanPro.woff');
-}
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'got';
-    color: #f7c58d;
+    font-family: 'Poppins' , sans-serif;
+    color: #ebebeb;
 }
 
 body{ 
-    height: 1200px;
-    background: 
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(./assets/bg.jpg) center / cover;
-}
-
-h1{
-    font-weight: lighter;
+    background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }
 
 .mainBox{
@@ -127,14 +115,12 @@ h1{
 }
 
 #progress span{
+    font-weight: bold;
     font-size: 35px;
 }
 
 
 @media screen and (max-width: 1100px) {
-    body{
-        height: 1100px;
-    }
 
     .mainBox , .quizBox , .resultBox{
         width: 700px;
@@ -143,9 +129,6 @@ h1{
 
 
 @media screen and (max-width: 768px) {
-    body{
-        height: 900px;
-    }
 
     .mainBox , .quizBox , .resultBox{
         width: 450px;
@@ -194,9 +177,6 @@ h1{
 
 
 @media screen and (max-width: 480px) {
-    body{
-        height: 700px;
-    }
 
     .mainBox , .quizBox , .resultBox{
         width: 370px;
